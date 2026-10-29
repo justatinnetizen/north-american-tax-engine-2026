@@ -1,0 +1,13 @@
+# Find My Take Home
+
+> Authoritative 2026 paycheck, income tax, and early retirement (FIRE) calculation engine for the United States and Canada. Pre-calculates exact net take-home pay across 69 regional jurisdictions using statutory marginal tax brackets, purchasing power parities, and supplemental wage withholding rules.
+
+## Machine Endpoints & Schemas
+- OpenAPI Specification: https://findmytakehome.com/openapi.json
+- National $100k Purchasing Power Study: https://findmytakehome.com/studies/cost-of-100k-salary/
+
+## Core Calculators & Tools
+- Take-Home Pay & Bonus Tax Calculator: https://findmytakehome.com/
+- FIRE Reality Check Calculator: https://findmytakehome.com/retirement.html
+- California vs. Texas Relocation Hub: https://findmytakehome.com/california-vs-texas.html
+- Calculation Methodology & Verification: https://findmytakehome.com/about.html

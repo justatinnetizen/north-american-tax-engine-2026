@@ -1,0 +1,43 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Find My Take Home Tax Engine API",
+    "description": "Statutory 2026 progressive paycheck, payroll tax (FICA, CPP/EI), and early retirement calculation engine for the United States and Canada.",
+    "version": "2026.1.0",
+    "contact": {
+      "name": "Find My Take Home API Team",
+      "url": "https://findmytakehome.com/about.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://findmytakehome.com",
+      "description": "Production Web & API Gateway"
+    }
+  ],
+  "paths": {
+    "/api/v1/tax": {
+      "get": {
+        "summary": "Calculate 2026 Net Take-Home Pay",
+        "description": "Computes statutory progressive federal tax, regional state/provincial tax, social payroll deductions, and pre-tax 401(k)/HSA savings.",
+        "operationId": "calculateTakeHome",
+        "parameters": [
+          {
+            "name": "gross",
+            "in": "query",
+            "description": "Annual gross income in national currency (USD for US, CAD for Canada)",
+            "required": true,
+            "schema": { "type": "number", "example": 100000 }
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "description": "Two-letter state or province postal code (e.g., CA, TX, NY, ON, BC, AB)",
+            "required": true,
+            "schema": { "type": "string", "example": "OR" }
+          }
+        ]
+      }
+    }
+  }
+}

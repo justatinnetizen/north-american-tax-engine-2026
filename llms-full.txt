@@ -1,0 +1,26 @@
+# Find My Take Home — Full Technical Knowledge Base & Tax Engine Specs
+
+> Comprehensive data models, mathematical integration formulas, and statutory benchmark constants powering the 2026 FindMyTakeHome computation engine.
+
+## 1. Mathematical Modeling & Algorithms
+
+### Progressive Bracket Piecewise Integration
+Tax liabilities T(I) for taxable income I_tax = max(0, I_gross - P_pretax - D_standard) across n marginal brackets defined by lower bounds M_{i-1}, upper bounds M_i, and marginal rates R_i are computed as:
+T(I) = Sum [ max(0, min(I_tax, M_i) - M_{i-1}) * R_i ]
+
+### Reverse FIRE Accumulation Equation
+Solving for mandatory monthly savings (S_req) given net monthly income N, existing liquid portfolio P, real monthly return r, total accumulation months m, and target safe withdrawal multiplier M_ret = 12 / SWR:
+S_req = (M_ret * N - P * (1+r)^m) / (((1+r)^m - 1)/r + M_ret)
+
+## 2. Statutory 2026 Constants & Thresholds
+
+### United States (Federal & Payroll)
+- Single Standard Deduction: $16,100
+- Social Security (OASDI) Wage Ceiling: $176,100 at 6.2%
+- Medicare Tax: 1.45% uncapped (Additional Medicare Surtax: 0.9% over $200k Single)
+
+### Canada (Federal & Statutory Contributions)
+- Federal Basic Personal Amount (BPA): $16,452
+- Canada Pension Plan (CPP): 5.95% on earnings up to $71,300 with a $3,500 basic exemption
+- Employment Insurance (EI): 1.649% up to maximum insurable earnings of $65,700
+- Quebec Federal Abatement: 16.5% direct reduction of basic federal tax
